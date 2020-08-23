@@ -46,7 +46,7 @@
 		1E68AA83720D2C9E549A7B70D6C83F75 /* curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = curry.swift; path = Ramda/Classes/curry.swift; sourceTree = "<group>"; };
 		1FCE056BD6E373DD6A61FC228FC9CC4A /* Ramda.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ramda.swift; path = Ramda/Classes/Ramda.swift; sourceTree = "<group>"; };
 		2A53A5BA60312C26791B05829B5C41BA /* anyPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = anyPass.swift; path = Ramda/Classes/anyPass.swift; sourceTree = "<group>"; };
-		2BB2CC1DDE5E66277A762C710EAFA645 /* Ramda.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Ramda.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2BB2CC1DDE5E66277A762C710EAFA645 /* Ramda.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Ramda.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3BEB2E379D9B92754D67FDE60829E9F2 /* Ramda-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ramda-dummy.m"; sourceTree = "<group>"; };
 		43BC3AC3CE0CB39F65B11DE123AFC9C2 /* Ramda-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Ramda-Info.plist"; sourceTree = "<group>"; };
@@ -56,8 +56,8 @@
 		494274E0D51C610B0B6A6A1804CBC226 /* append.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = append.swift; path = Ramda/Classes/append.swift; sourceTree = "<group>"; };
 		4B03F4916A8F24E45097EC3519F4AC6A /* all.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = all.swift; path = Ramda/Classes/all.swift; sourceTree = "<group>"; };
 		4E3E2D65A23B827E4460A51DD513CC8C /* always.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = always.swift; path = Ramda/Classes/always.swift; sourceTree = "<group>"; };
-		4ED052429ADD2192E90EFDCD367EFCC2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		53188396DDC8291DC9AC62FB98520111 /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Ramda_Tests.framework; path = "Pods-Ramda_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED052429ADD2192E90EFDCD367EFCC2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		53188396DDC8291DC9AC62FB98520111 /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E215CE11202A5E1220986106A199AF /* and.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = and.swift; path = Ramda/Classes/and.swift; sourceTree = "<group>"; };
 		57C4AB723EEA37F431DACA998524AB19 /* Pods-Ramda_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ramda_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5930D34287914127D3C7992116D112BB /* allPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = allPass.swift; path = Ramda/Classes/allPass.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		5D21B7FD1A06EC5183C07EB0F011A5DB /* Pods-Ramda_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ramda_Tests-dummy.m"; sourceTree = "<group>"; };
 		686F5C27F73973278338C84BF534F8C1 /* add.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = add.swift; path = Ramda/Classes/add.swift; sourceTree = "<group>"; };
 		88BF98CBDEF4E8E76B954A0CC5912E85 /* Ramda.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Ramda.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0DBB4F61709EAC995E77B38709FF499 /* Pods-Ramda_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ramda_Tests-Info.plist"; sourceTree = "<group>"; };
 		A8ED42852074869DC4B7E6B8E28A41F4 /* Ramda-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ramda-prefix.pch"; sourceTree = "<group>"; };
 		A91F22D44CCF4167F65EFF9F8776ECD1 /* Pods-Ramda_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ramda_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -75,10 +75,10 @@
 		C35298FAB6B4B6AEA5F242E9C27774F4 /* Ramda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ramda.release.xcconfig; sourceTree = "<group>"; };
 		C957AB7E1A28727DA3EF21D106003770 /* any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = any.swift; path = Ramda/Classes/any.swift; sourceTree = "<group>"; };
 		E56913675C631AE98D288AA0A6733EB9 /* flip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = flip.swift; path = Ramda/Classes/flip.swift; sourceTree = "<group>"; };
-		F2BB07DF25189EBC02CF85AD522B51DA /* Ramda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ramda.framework; path = Ramda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2BB07DF25189EBC02CF85AD522B51DA /* Ramda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ramda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45CD15EE22E97D0D09BABCAB67DC53B /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F475059C275CD27269D5B542C5B3A65A /* Ramda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ramda.debug.xcconfig; sourceTree = "<group>"; };
-		FA19A449EDC5A1EE64D19DF06C0D19D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FA19A449EDC5A1EE64D19DF06C0D19D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 		1399F83BED74B5E66D975DB0364241F0 /* Ramda */ = {
 			isa = PBXGroup;
 			children = (
+				1FCE056BD6E373DD6A61FC228FC9CC4A /* Ramda.swift */,
 				686F5C27F73973278338C84BF534F8C1 /* add.swift */,
 				455232D70F278B099D559E865FC3FE53 /* addIndex.swift */,
 				0EDAB24058E233C63050521D27B7188D /* adjust.swift */,
@@ -118,7 +119,6 @@
 				494274E0D51C610B0B6A6A1804CBC226 /* append.swift */,
 				1E68AA83720D2C9E549A7B70D6C83F75 /* curry.swift */,
 				E56913675C631AE98D288AA0A6733EB9 /* flip.swift */,
-				1FCE056BD6E373DD6A61FC228FC9CC4A /* Ramda.swift */,
 				7B96030A47E8E29D9809EF71ECF95034 /* Pod */,
 				493009E9AD26A67A7A135A63CFACF75D /* Support Files */,
 			);
@@ -486,8 +486,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
