@@ -25,6 +25,7 @@
 		AB709CA0A7490039ACF18013AAEB0AB4 /* curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68AA83720D2C9E549A7B70D6C83F75 /* curry.swift */; };
 		AD18292DD585B93A03D98E94A6F91425 /* Pods-Ramda_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D21B7FD1A06EC5183C07EB0F011A5DB /* Pods-Ramda_Tests-dummy.m */; };
 		B561F2F6A54D8B03E09D7F961C5626E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B5E5211024F2156000464BDD /* apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5210E24F2155B00464BDD /* apply.swift */; };
 		C0F0A5B635D9D6C09372640F58903F1A /* Pods-Ramda_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47EFC4FAA40002312195010CEB113EAA /* Pods-Ramda_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7E66AFD8E248CC98E985648A2CF4FD /* always.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E2D65A23B827E4460A51DD513CC8C /* always.swift */; };
 		E6E74A4FB4FE837E0EB7D0F429D778FB /* allPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930D34287914127D3C7992116D112BB /* allPass.swift */; };
@@ -72,6 +73,7 @@
 		ACDDCD175A163ABF66B42CD3131CF09B /* Pods-Ramda_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ramda_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1203F9913A87CEBB4ADF6C1FD4CE974 /* aperture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = aperture.swift; path = Ramda/Classes/aperture.swift; sourceTree = "<group>"; };
 		B51074C0555AAB816B98202442BE53EA /* Ramda-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ramda-umbrella.h"; sourceTree = "<group>"; };
+		B5E5210E24F2155B00464BDD /* apply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = apply.swift; path = Ramda/Classes/apply.swift; sourceTree = "<group>"; };
 		C35298FAB6B4B6AEA5F242E9C27774F4 /* Ramda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ramda.release.xcconfig; sourceTree = "<group>"; };
 		C957AB7E1A28727DA3EF21D106003770 /* any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = any.swift; path = Ramda/Classes/any.swift; sourceTree = "<group>"; };
 		E56913675C631AE98D288AA0A6733EB9 /* flip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = flip.swift; path = Ramda/Classes/flip.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				686F5C27F73973278338C84BF534F8C1 /* add.swift */,
 				455232D70F278B099D559E865FC3FE53 /* addIndex.swift */,
 				0EDAB24058E233C63050521D27B7188D /* adjust.swift */,
+				B5E5210E24F2155B00464BDD /* apply.swift */,
 				4B03F4916A8F24E45097EC3519F4AC6A /* all.swift */,
 				5930D34287914127D3C7992116D112BB /* allPass.swift */,
 				4E3E2D65A23B827E4460A51DD513CC8C /* always.swift */,
@@ -287,6 +290,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					A6F587D8DCE719592FA260C7532A8D1C = {
+						LastSwiftMigration = 1160;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,6 +359,7 @@
 				18714EEE7EBAAD567E2035FD516C79B9 /* append.swift in Sources */,
 				AB709CA0A7490039ACF18013AAEB0AB4 /* curry.swift in Sources */,
 				39D0DC6D615AB9362FCF1106AD843801 /* flip.swift in Sources */,
+				B5E5211024F2156000464BDD /* apply.swift in Sources */,
 				7C95D05AA0A14E46042E537EFB407A67 /* Ramda-dummy.m in Sources */,
 				7E1C085DA905E6469834D66E06B17F1C /* Ramda.swift in Sources */,
 			);
@@ -373,6 +382,7 @@
 			baseConfigurationReference = ACDDCD175A163ABF66B42CD3131CF09B /* Pods-Ramda_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -395,6 +405,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -592,6 +604,7 @@
 			baseConfigurationReference = F45CD15EE22E97D0D09BABCAB67DC53B /* Pods-Ramda_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -614,6 +627,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -25,7 +25,7 @@ extension Ramda {
 
 extension Ramda {
     
-    static func ap<A, B>(_ a: Placeholder) -> ([(A) -> B]) -> ([A]) -> [B] {
+    static func ap<A, B>(_ p: Placeholder) -> ([(A) -> B]) -> ([A]) -> [B] {
         curry(ap)
     }
     

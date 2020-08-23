@@ -167,4 +167,17 @@ class Tests: XCTestCase {
         XCTAssertEqual(R.append(R.__, input)("tests"), output)
         XCTAssertEqual(R.append("tests", R.__)(input), output)
     }
+    
+    func testApply() {
+        let f: (String) -> String = { $0.uppercased() }
+        let input = "pizza"
+        let output = "PIZZA"
+        
+        XCTAssertEqual(R.apply(f, input), output)
+        XCTAssertEqual(R.apply(f)(input), output)
+        
+        XCTAssertEqual(R.apply(R.__)(f)(input), output)
+        XCTAssertEqual(R.apply(R.__, input)(f), output)
+        XCTAssertEqual(R.apply(f, R.__)(input), output)
+    }
 }
