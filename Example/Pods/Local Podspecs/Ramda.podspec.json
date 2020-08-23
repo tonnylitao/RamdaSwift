@@ -1,22 +1,24 @@
 {
   "name": "Ramda",
-  "version": "0.1.0",
-  "summary": "A short description of Ramda.",
+  "version": "0.0.1",
+  "summary": "Ramda.JS in Swift",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/TonnyLTP/Ramda",
+  "homepage": "https://github.com/tonnylitao/RamdaSwift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "TonnyLTP": "tonny.li@latipay.net"
+    "tonnylitao": "tonny.li@latipay.net"
   },
   "source": {
-    "git": "https://github.com/TonnyLTP/Ramda.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/tonnylitao/RamdaSwift.git",
+    "tag": "0.0.1"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Ramda/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "Ramda/Classes/**/*",
+  "swift_version": "5.0"
 }

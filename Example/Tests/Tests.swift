@@ -1,5 +1,5 @@
 import XCTest
-import Ramda
+@testable import Ramda
 
 class Tests: XCTestCase {
     
@@ -13,16 +13,158 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testAdd() {
+        let output = 1 + 2
+        
+        XCTAssertEqual(R.add(1, 2), output)
+        XCTAssertEqual(R.add(1)(2), output)
+        
+        XCTAssertEqual(R.add(R.__)(1)(2), output)
+        XCTAssertEqual(R.add(R.__, 2)(1), output)
+        XCTAssertEqual(R.add(1, R.__)(2), output)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
+    func testAddIndex() {
+        let f: (Int, String) -> String = { "\($0) - \($1)" }
+        let list = ["f", "o", "o", "b", "a", "r"]
+        let result = ["0 - f", "1 - o", "2 - o", "3 - b", "4 - a", "5 - r"]
+        
+        XCTAssertEqual(R.addIndex(f, list), result)
+        XCTAssertEqual(R.addIndex(f)(list), result)
+        
+        XCTAssertEqual(R.addIndex(R.__)(f)(list), result)
+        XCTAssertEqual(R.addIndex(R.__, list)(f), result)
+        XCTAssertEqual(R.addIndex(f, R.__)(list), result)
     }
     
+    func testAdjust() {
+        let input1 = 1
+        let f: (String) -> String = { $0.uppercased() }
+        let input3 = ["a", "b", "c", "d"]
+        let output = ["a", "B", "c", "d"]
+        
+        XCTAssertEqual(R.adjust(input1, f, input3), output)
+        XCTAssertEqual(R.adjust(input1)(f)(input3), output)
+        XCTAssertEqual(R.adjust(input1, f)(input3), output)
+        
+        XCTAssertEqual(R.adjust(R.__)(input1)(f)(input3), output)
+        XCTAssertEqual(R.adjust(R.__, f, input3)(input1), output)
+        XCTAssertEqual(R.adjust(input1, R.__, input3)(f), output)
+        XCTAssertEqual(R.adjust(input1, f, R.__)(input3), output)
+        
+        XCTAssertEqual(R.adjust(R.__, f)(input1)(input3), output)
+        XCTAssertEqual(R.adjust(input1, R.__)(f)(input3), output)
+    }
+    
+    func testAll() {
+        let f: (Int) -> Bool = { $0 == 3 }
+        let input2 = [3, 3, 1, 3]
+        
+        XCTAssertFalse(R.all(f, input2))
+        XCTAssertFalse(R.all(R.__)(f)(input2))
+        XCTAssertFalse(R.all(R.__, input2)(f))
+        XCTAssertFalse(R.all(f, R.__)(input2))
+        
+        XCTAssertTrue(R.all(f, [3, 3, 3, 3]))
+        XCTAssertTrue(R.all(R.__)(f)([3, 3, 3, 3]))
+        XCTAssertTrue(R.all(R.__, [3, 3, 3, 3])(f))
+        XCTAssertTrue(R.all(f, R.__)([3, 3, 3, 3]))
+    }
+    
+    func testAllPass() {
+        let f1: (String) -> Bool = { $0.count == 1 }
+        let f2: (String) -> Bool = { Int($0) != nil }
+        let f3: (String) -> Bool = { $0.count == 2 }
+        
+        let input = "1"
+        
+        XCTAssertTrue(R.allPass([f1, f2])(input))
+        XCTAssertFalse(R.allPass([f1, f2, f3])(input))
+    }
+    
+    func testAlways() {
+        XCTAssertEqual(R.always(1)(), 1)
+        XCTAssertEqual(R.always(1)(100), 1)
+        
+        XCTAssertEqual(R.always("a")(), "a")
+        XCTAssertEqual(R.always("a")("b"), "a")
+    }
+    
+    func testAnd() {
+        XCTAssertTrue(R.and(true, true))
+        XCTAssertFalse(R.and(true, false))
+        XCTAssertFalse(R.and(false, false))
+        
+        XCTAssertTrue(R.and(true)(true))
+        XCTAssertFalse(R.and(true)(false))
+        XCTAssertFalse(R.and(false)(true))
+        
+        XCTAssertTrue(R.and(R.__, true)(true))
+        XCTAssertFalse(R.and(R.__, true)(false))
+        
+        XCTAssertTrue(R.and(true, R.__)(true))
+        XCTAssertFalse(R.and(true, R.__)(false))
+    }
+    
+    //andThen
+    
+    func testAny() {
+        let f: (Int) -> Bool = { $0 == 3 }
+        let input2 = [1, 1, 1, 3]
+        
+        XCTAssertTrue(R.any(f, input2))
+        XCTAssertTrue(R.any(R.__)(f)(input2))
+        XCTAssertTrue(R.any(R.__, input2)(f))
+        XCTAssertTrue(R.any(f, R.__)(input2))
+    }
+    
+    func testAnyPass() {
+        let f1: (String) -> Bool = { $0.count == 2 }
+        let f2: (String) -> Bool = { Int($0) != nil }
+        
+        let input = "1"
+        
+        XCTAssertTrue(R.anyPass([f1, f2])(input))
+    }
+    
+    func testAp() {
+        let input = ["pizza", "salad"]
+        let f1: (String) -> String = { $0.uppercased() }
+        let f2: (String) -> String = { $0 + " A" }
+        let output = ["PIZZA", "SALAD", "pizza A", "salad A"]
+        
+        XCTAssertEqual(R.ap([f1, f2], input), output)
+        
+        XCTAssertEqual(R.ap([f1, f2])(input), output)
+        
+        XCTAssertEqual(R.ap(R.__)([f1, f2])(input), output)
+        XCTAssertEqual(R.ap(R.__, input)([f1, f2]), output)
+        XCTAssertEqual(R.ap([f1, f2], R.__)(input), output)
+    }
+    
+    func testAperture() {
+        let input = [1, 2, 3]
+        
+        XCTAssertEqual(R.aperture(1, input), [[1], [2], [3]])
+        XCTAssertEqual(R.aperture(2, input), [[1, 2], [2, 3]])
+        XCTAssertEqual(R.aperture(3, input), [[1, 2, 3]])
+        XCTAssertEqual(R.aperture(0, input), [[], [], []])
+        XCTAssertEqual(R.aperture(4, input), [])
+        
+        XCTAssertEqual(R.aperture(R.__, input)(1), [[1], [2], [3]])
+        XCTAssertEqual(R.aperture(2, R.__)(input), [[1, 2], [2, 3]])
+        XCTAssertEqual(R.aperture(R.__)(3)(input), [[1, 2, 3]])
+    }
+    
+    func testAppend() {
+        let input = ["write", "more"]
+        let output = ["write", "more", "tests"]
+        
+        XCTAssertEqual(R.append("tests", input), output)
+        XCTAssertEqual(R.append("tests")(input), output)
+        
+        XCTAssertEqual(R.append(R.__)("tests")(input), output)
+        XCTAssertEqual(R.append(R.__, input)("tests"), output)
+        XCTAssertEqual(R.append("tests", R.__)(input), output)
+    }
 }

@@ -401,7 +401,7 @@
 			};
 			name = Debug;
 		};
-		69BCD15D5551E93E1AB1539A18912298 /* Release */ = {
+		62A7E7FCE07DB95DF9CD5CCEAF60FF9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C35298FAB6B4B6AEA5F242E9C27774F4 /* Ramda.release.xcconfig */;
 			buildSettings = {
@@ -425,13 +425,44 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		8B6F1AACBC14CBF4FB96C228B97CD1AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F475059C275CD27269D5B542C5B3A65A /* Ramda.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Ramda/Ramda-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ramda/Ramda-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Ramda/Ramda.modulemap";
+				PRODUCT_MODULE_NAME = Ramda;
+				PRODUCT_NAME = Ramda;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -556,37 +587,6 @@
 			};
 			name = Debug;
 		};
-		DA194C89E5B0F6CFB415529672488965 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F475059C275CD27269D5B542C5B3A65A /* Ramda.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Ramda/Ramda-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Ramda/Ramda-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Ramda/Ramda.modulemap";
-				PRODUCT_MODULE_NAME = Ramda;
-				PRODUCT_NAME = Ramda;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		E59F69C3233F0D66566828321467CB46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F45CD15EE22E97D0D09BABCAB67DC53B /* Pods-Ramda_Tests.release.xcconfig */;
@@ -645,8 +645,8 @@
 		F921CCB423951331009B050D35FA9045 /* Build configuration list for PBXNativeTarget "Ramda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA194C89E5B0F6CFB415529672488965 /* Debug */,
-				69BCD15D5551E93E1AB1539A18912298 /* Release */,
+				8B6F1AACBC14CBF4FB96C228B97CD1AE /* Debug */,
+				62A7E7FCE07DB95DF9CD5CCEAF60FF9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

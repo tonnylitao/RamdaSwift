@@ -1,5 +1,5 @@
 PODS:
-  - Ramda (0.1.0)
+  - Ramda (0.0.1)
 
 DEPENDENCIES:
   - Ramda (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Ramda: 311de2e00fc02916ba4df061653e491e7a95b200
+  Ramda: e8bbfd48c5b29bf75c10dd35451c32dae1b42d1a
 
 PODFILE CHECKSUM: 60a09e8d15382deb209c560aeb66208cd4e21407
 
