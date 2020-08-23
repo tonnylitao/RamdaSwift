@@ -16,14 +16,14 @@ More details in [Doc](https://ramdajs.com/docs)
 ### __
 
 ```swift
-R.add(R.__, 1)(2)		// 2 + 1
+R.add(R.__, 1)(2) // 2 + 1
 ```
 
 ### add
 
 ```swift
-R.add(2, 3)		// 5
-R.add(7)(10)	// 17
+R.add(2, 3) // 5
+R.add(7)(10) // 17
 ```
 
 ### addIndex
