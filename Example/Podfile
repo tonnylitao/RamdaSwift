@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Ramda_Tests' do
+  pod 'Ramda', :path => '../'
+  
+  
+end

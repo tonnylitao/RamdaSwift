@@ -1,0 +1,6 @@
+framework module Pods_Ramda_Tests {
+  umbrella header "Pods-Ramda_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

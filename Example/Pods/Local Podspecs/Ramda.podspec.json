@@ -1,0 +1,22 @@
+{
+  "name": "Ramda",
+  "version": "0.1.0",
+  "summary": "A short description of Ramda.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/TonnyLTP/Ramda",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "TonnyLTP": "tonny.li@latipay.net"
+  },
+  "source": {
+    "git": "https://github.com/TonnyLTP/Ramda.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Ramda/Classes/**/*"
+}
