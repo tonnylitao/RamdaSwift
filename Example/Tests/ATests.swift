@@ -43,13 +43,13 @@ class Tests: XCTestCase {
         let input3 = ["a", "b", "c", "d"]
         let output = ["a", "B", "c", "d"]
         
-        XCTAssertEqual(R.adjust(input1, f, input3), output)
+        XCTAssertEqual(R.adjust(input1, f, input3) as! [String], output)
         
-        XCTAssertEqual(R.curry(R.adjust)(input1)(f)(input3), output)
+        XCTAssertEqual(R.curry(R.adjust)(input1)(f)(input3) as! [String], output)
         
-        XCTAssertEqual(R.adjust(R.__, f, input3)(input1), output)
-        XCTAssertEqual(R.adjust(input1, R.__, input3)(f), output)
-        XCTAssertEqual(R.adjust(input1, f, R.__)(input3), output)
+        XCTAssertEqual(R.adjust(R.__, f, input3)(input1) as! [String], output)
+        XCTAssertEqual(R.adjust(input1, R.__, input3)(f) as! [String], output)
+        XCTAssertEqual(R.adjust(input1, f, R.__)(input3) as! [String], output)
     }
     
     func testAll() {
