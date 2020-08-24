@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* ATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ATests.swift */; };
 		F649BB6BE072852CC4A74E04 /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43D953508B40F1B030D5CFF /* Pods_Ramda_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -15,7 +15,7 @@
 		602049DB25AEC6CD35D19BBC /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Ramda_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ramda_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* ATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATests.swift; sourceTree = "<group>"; };
 		7B97E41BC671AB846F8628A8 /* Pods-Ramda_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A435F04CC8CF1E8D6210FF84 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DC83BE57693BD91094F8B632 /* Ramda.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Ramda.podspec; path = ../Ramda.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -66,7 +66,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* ATests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -213,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* ATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -223,4 +223,22 @@ class Tests: XCTestCase {
         
         XCTAssertEqual(input.sorted(by: R.descend(f)), output)
     }
+    
+    func testAssocPath() {
+        
+        XCTAssertEqual(R.assocPath(["a"], 1, ["a": 0]) as! [String: Int],
+                       ["a": 1])
+
+        XCTAssertEqual(R.assocPath(["a"], 1, ["a": ["b": 2]]) as! [String: Int],
+                       ["a": 1])
+
+        XCTAssertEqual(R.assocPath(["a", "b"], 1, ["a": ["b": 2]]) as! [String: [String: Int]],
+                       ["a": ["b": 1]])
+
+        XCTAssertEqual(R.assocPath(["a", "b"], 1, ["a": ["c": 2]]) as! [String: [String: Int]],
+                       ["a": ["c": 2, "b": 1]])
+        
+//        print(R.assocPath(["a", "b", "c"], 1, ["a": ["d": 2]]))
+//        print(R.assocPath(["a", "b", "c"], 1, ["a": 2]))
+    }
 }
