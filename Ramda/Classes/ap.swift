@@ -18,22 +18,15 @@ extension Ramda {
 
 extension Ramda {
     
-    static func ap<A, B>(_ a: [(A) -> B]) -> ([A]) -> [B] {
-        curry(ap)(a)
-    }
-}
-
-extension Ramda {
-    
-    static func ap<A, B>(_ p: Placeholder) -> ([(A) -> B]) -> ([A]) -> [B] {
-        curry(ap)
+    static func ap<A, B>(_ p: Placeholder, _ b: [A]) -> ([(A) -> B]) -> [B] {
+        { a in
+            ap(a, b)
+        }
     }
     
     static func ap<A, B>(_ a: ([(A) -> B]), _ p: Placeholder) -> ([A]) -> [B] {
-        curry(ap)(a)
-    }
-    
-    static func ap<A, B>(_ p: Placeholder, _ b: [A]) -> ([(A) -> B]) -> [B] {
-        flip(curry(ap))(b)
+        { b in
+            ap(a, b)
+        }
     }
 }

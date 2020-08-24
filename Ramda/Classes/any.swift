@@ -15,24 +15,18 @@ extension Ramda {
 
 }
 
-extension Ramda {
-    
-    static func any<A>(_ a: @escaping (A) -> Bool) -> ([A]) -> Bool {
-        curry(any)(a)
-    }
-}
 
 extension Ramda {
     
-    static func any<A>(_ p: Placeholder) -> (@escaping (A) -> Bool) -> ([A]) -> Bool {
-        curry(any)
+    static func any<A>(_ p: Placeholder, _ b: [A]) -> (@escaping (A) -> Bool) -> Bool {
+        { a in
+            any(a, b)
+        }
     }
     
     static func any<A>(_ a: @escaping (A) -> Bool, _ p: Placeholder) -> ([A]) -> Bool {
-        curry(any)(a)
-    }
-    
-    static func any<A>(_ p: Placeholder, _ b: [A]) -> (@escaping (A) -> Bool) -> Bool {
-        flip(curry(any))(b)
+        { b in
+            any(a, b)
+        }
     }
 }

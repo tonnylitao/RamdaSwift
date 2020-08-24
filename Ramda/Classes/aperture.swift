@@ -27,22 +27,16 @@ extension Ramda {
 
 extension Ramda {
     
-    static func aperture<A>(_ a: Int) -> ([A]) -> [[A]] {
-        curry(aperture)(a)
-    }
-}
-
-extension Ramda {
-    
-    static func aperture<A>(_ p: Placeholder) -> (Int) -> ([A]) -> [[A]] {
-        curry(aperture)
+    static func aperture<A>(_ p: Placeholder, _ b: [A]) -> (Int) -> [[A]] {
+        { a in
+            aperture(a, b)
+        }
     }
     
     static func aperture<A>(_ a: Int, _ p: Placeholder) -> ([A]) -> [[A]] {
-        curry(aperture)(a)
+        { b in
+            aperture(a, b)
+        }
     }
     
-    static func aperture<A>(_ p: Placeholder, _ b: [A]) -> (Int) -> [[A]] {
-        flip(curry(aperture))(b)
-    }
 }

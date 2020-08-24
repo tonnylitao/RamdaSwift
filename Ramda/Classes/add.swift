@@ -17,22 +17,15 @@ extension Ramda {
 
 extension Ramda {
     
-    static func add<A: AdditiveArithmetic>(_ a: A) -> (A) -> A {
-        curry(add)(a)
-    }
-}
-
-extension Ramda {
-    
-    static func add<A: AdditiveArithmetic>(_ a: Placeholder) -> (A) -> (A) -> A {
-        curry(add)
-    }
-    
     static func add<A: AdditiveArithmetic>(_ a: A, _ p: Placeholder) -> (A) -> A {
-        curry(add)(a)
+        { b in
+            add(a, b)
+        }
     }
     
     static func add<B: AdditiveArithmetic>(_ p: Placeholder, _ b: B) -> (B) -> B {
-        flip(curry(add))(b)
+        { a in
+            add(a, b)
+        }
     }
 }

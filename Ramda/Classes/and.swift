@@ -14,16 +14,6 @@ extension Ramda {
     }
 }
 
-
-extension Ramda {
-    
-    static func and(_ a: Bool) -> (@autoclosure () -> Bool) -> Bool {
-        { b in
-            a && b()
-        }
-    }
-}
-
 extension Ramda {
     
     static func and(_ p: Placeholder, _ b: @escaping @autoclosure () -> Bool) -> (Bool) -> Bool {

@@ -9,6 +9,12 @@ import Foundation
 
 extension Ramda {
     
+    static func curry<A, B>(_ f: @escaping (A) -> B) -> (A) -> B {
+        { a in
+            f(a)
+        }
+    }
+    
     static func curry<A, B, C>(_ f: @escaping (A, B) -> C) -> (A) -> (B) -> C {
         { a in
             { b in

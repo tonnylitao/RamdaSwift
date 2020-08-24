@@ -14,25 +14,17 @@ extension Ramda {
     }
 }
 
-
 extension Ramda {
-    
-    static func apply<A, B>(_ f: @escaping (A) -> B) -> (A) -> B {
-        curry(apply)(f)
-    }
-}
-
-extension Ramda {
-    
-    static func apply<A, B>(_ p: Placeholder) -> (@escaping (A) -> B) -> (A) -> B {
-        curry(apply)
-    }
     
     static func apply<A, B>(_ f: (@escaping (A) -> B), _ p: Placeholder) -> (A) -> B {
-        curry(apply)(f)
+        { a in
+            apply(f, a)
+        }
     }
     
     static func apply<A, B>(_ p: Placeholder, _ a: A) -> (@escaping (A) -> B) -> B {
-        flip(curry(apply))(a)
+        { f in
+            apply(f, a)
+        }
     }
 }

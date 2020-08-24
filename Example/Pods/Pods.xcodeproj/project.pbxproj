@@ -26,6 +26,10 @@
 		AD18292DD585B93A03D98E94A6F91425 /* Pods-Ramda_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D21B7FD1A06EC5183C07EB0F011A5DB /* Pods-Ramda_Tests-dummy.m */; };
 		B561F2F6A54D8B03E09D7F961C5626E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B5E5211024F2156000464BDD /* apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5210E24F2155B00464BDD /* apply.swift */; };
+		B5E5211224F2453800464BDD /* applyTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5211124F2453800464BDD /* applyTo.swift */; };
+		B5E5211424F3528A00464BDD /* ascend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5211324F3528A00464BDD /* ascend.swift */; };
+		B5E5211624F3558400464BDD /* descend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5211524F3558400464BDD /* descend.swift */; };
+		B5E5211824F3561D00464BDD /* assoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5211724F3561D00464BDD /* assoc.swift */; };
 		C0F0A5B635D9D6C09372640F58903F1A /* Pods-Ramda_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47EFC4FAA40002312195010CEB113EAA /* Pods-Ramda_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7E66AFD8E248CC98E985648A2CF4FD /* always.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E2D65A23B827E4460A51DD513CC8C /* always.swift */; };
 		E6E74A4FB4FE837E0EB7D0F429D778FB /* allPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930D34287914127D3C7992116D112BB /* allPass.swift */; };
@@ -74,6 +78,10 @@
 		B1203F9913A87CEBB4ADF6C1FD4CE974 /* aperture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = aperture.swift; path = Ramda/Classes/aperture.swift; sourceTree = "<group>"; };
 		B51074C0555AAB816B98202442BE53EA /* Ramda-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ramda-umbrella.h"; sourceTree = "<group>"; };
 		B5E5210E24F2155B00464BDD /* apply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = apply.swift; path = Ramda/Classes/apply.swift; sourceTree = "<group>"; };
+		B5E5211124F2453800464BDD /* applyTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = applyTo.swift; path = Ramda/Classes/applyTo.swift; sourceTree = "<group>"; };
+		B5E5211324F3528A00464BDD /* ascend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ascend.swift; path = Ramda/Classes/ascend.swift; sourceTree = "<group>"; };
+		B5E5211524F3558400464BDD /* descend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = descend.swift; path = Ramda/Classes/descend.swift; sourceTree = "<group>"; };
+		B5E5211724F3561D00464BDD /* assoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = assoc.swift; path = Ramda/Classes/assoc.swift; sourceTree = "<group>"; };
 		C35298FAB6B4B6AEA5F242E9C27774F4 /* Ramda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ramda.release.xcconfig; sourceTree = "<group>"; };
 		C957AB7E1A28727DA3EF21D106003770 /* any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = any.swift; path = Ramda/Classes/any.swift; sourceTree = "<group>"; };
 		E56913675C631AE98D288AA0A6733EB9 /* flip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = flip.swift; path = Ramda/Classes/flip.swift; sourceTree = "<group>"; };
@@ -111,6 +119,9 @@
 				455232D70F278B099D559E865FC3FE53 /* addIndex.swift */,
 				0EDAB24058E233C63050521D27B7188D /* adjust.swift */,
 				B5E5210E24F2155B00464BDD /* apply.swift */,
+				B5E5211124F2453800464BDD /* applyTo.swift */,
+				B5E5211324F3528A00464BDD /* ascend.swift */,
+				B5E5211524F3558400464BDD /* descend.swift */,
 				4B03F4916A8F24E45097EC3519F4AC6A /* all.swift */,
 				5930D34287914127D3C7992116D112BB /* allPass.swift */,
 				4E3E2D65A23B827E4460A51DD513CC8C /* always.swift */,
@@ -122,6 +133,7 @@
 				494274E0D51C610B0B6A6A1804CBC226 /* append.swift */,
 				1E68AA83720D2C9E549A7B70D6C83F75 /* curry.swift */,
 				E56913675C631AE98D288AA0A6733EB9 /* flip.swift */,
+				B5E5211724F3561D00464BDD /* assoc.swift */,
 				7B96030A47E8E29D9809EF71ECF95034 /* Pod */,
 				493009E9AD26A67A7A135A63CFACF75D /* Support Files */,
 			);
@@ -351,17 +363,21 @@
 				16EF7E36EF2D5750A1B78B107C27EEB2 /* all.swift in Sources */,
 				E6E74A4FB4FE837E0EB7D0F429D778FB /* allPass.swift in Sources */,
 				CD7E66AFD8E248CC98E985648A2CF4FD /* always.swift in Sources */,
+				B5E5211624F3558400464BDD /* descend.swift in Sources */,
 				A934E4F2DCCA49677C7002B57F1A442B /* and.swift in Sources */,
 				5F00920C9AA53BC4A05D8D458A9DC4A5 /* any.swift in Sources */,
 				0E119B151D32103E7EA13B39A0256B6F /* anyPass.swift in Sources */,
 				8BEB07A6F876C584E34902EC0C3E82F8 /* ap.swift in Sources */,
 				2150622349FB897889CAC53AC767CEB7 /* aperture.swift in Sources */,
+				B5E5211824F3561D00464BDD /* assoc.swift in Sources */,
 				18714EEE7EBAAD567E2035FD516C79B9 /* append.swift in Sources */,
 				AB709CA0A7490039ACF18013AAEB0AB4 /* curry.swift in Sources */,
 				39D0DC6D615AB9362FCF1106AD843801 /* flip.swift in Sources */,
 				B5E5211024F2156000464BDD /* apply.swift in Sources */,
+				B5E5211424F3528A00464BDD /* ascend.swift in Sources */,
 				7C95D05AA0A14E46042E537EFB407A67 /* Ramda-dummy.m in Sources */,
 				7E1C085DA905E6469834D66E06B17F1C /* Ramda.swift in Sources */,
+				B5E5211224F2453800464BDD /* applyTo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

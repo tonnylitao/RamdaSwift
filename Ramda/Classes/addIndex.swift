@@ -18,22 +18,15 @@ extension Ramda {
 
 extension Ramda {
     
-    static func addIndex<A, B>(_ f: @escaping IndexMap<A, B>) -> ([A]) -> [B] {
-        curry(addIndex)(f)
-    }
-}
-
-extension Ramda {
-    
-    static func addIndex<A, B>(_ p: Placeholder) -> (@escaping IndexMap<A, B>) -> ([A]) -> [B] {
-        curry(addIndex)
-    }
-    
     static func addIndex<A, B>(_ f: @escaping IndexMap<A, B>, _ p: Placeholder) -> ([A]) -> [B] {
-        curry(addIndex)(f)
+        { list in
+            addIndex(f, list)
+        }
     }
     
     static func addIndex<A, B>(_ p: Placeholder, _ list: [A]) -> (@escaping IndexMap<A, B>) -> [B] {
-        flip(curry(addIndex))(list)
+        { f in
+            addIndex(f, list)
+        }
     }
 }
