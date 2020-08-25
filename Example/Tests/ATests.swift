@@ -149,10 +149,10 @@ class Tests: XCTestCase {
     func testAperture() {
         let input = [1, 2, 3]
         
+        XCTAssertEqual(R.aperture(0, input), [[], [], []])
         XCTAssertEqual(R.aperture(1, input), [[1], [2], [3]])
         XCTAssertEqual(R.aperture(2, input), [[1, 2], [2, 3]])
         XCTAssertEqual(R.aperture(3, input), [[1, 2, 3]])
-        XCTAssertEqual(R.aperture(0, input), [[], [], []])
         XCTAssertEqual(R.aperture(4, input), [])
         
         XCTAssertEqual(R.aperture(R.__, input)(1), [[1], [2], [3]])
